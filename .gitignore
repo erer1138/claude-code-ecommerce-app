@@ -22,19 +22,55 @@
 
 # misc
 .DS_Store
+.AppleDouble
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# secrets / keys / certs
 *.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+*.pfx.password
+secrets/
 
 # debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+*.log
+logs/
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
+
+# supabase (local dev state — do not commit local secrets/branches)
+supabase/.branches
+supabase/.temp
+supabase/.env
+supabase/.env.*
+
+# claude code local state (machine-specific, not for sharing)
+.claude/settings.local.json
+.mcp.local.json
+
+# editor / IDE
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
 
 # typescript
 *.tsbuildinfo
