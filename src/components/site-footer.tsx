@@ -1,7 +1,15 @@
 import Link from "next/link";
-import { Camera, Globe, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import {
+  EnvelopeSimple,
+  FacebookLogo,
+  InstagramLogo,
+  MapPin,
+  Phone,
+  XLogo,
+} from "@phosphor-icons/react/ssr";
 
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 const FOOTER_COLUMNS = [
   {
@@ -24,7 +32,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="flex flex-col gap-8 border-b border-border pb-10 lg:flex-row lg:items-center lg:justify-between">
           <div>
-            <h3 className="text-lg font-semibold text-foreground">
+            <h3 className="font-heading text-xl font-medium tracking-tight text-foreground">
               รับข่าวสารและโปรโมชั่นก่อนใคร
             </h3>
             <p className="mt-1 text-sm text-muted-foreground">
@@ -36,7 +44,7 @@ export function SiteFooter() {
               type="email"
               required
               placeholder="อีเมลของคุณ"
-              className="h-10 w-full flex-1 rounded-full border border-border bg-input/30 px-4 text-sm outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
+              className="h-10 w-full flex-1 rounded-md border border-border bg-input/30 px-4 text-sm outline-none placeholder:text-muted-foreground focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50"
             />
             <Button type="submit" className="shrink-0 sm:w-auto">
               สมัครรับข่าวสาร
@@ -47,10 +55,10 @@ export function SiteFooter() {
         <div className="grid grid-cols-1 gap-10 py-10 sm:grid-cols-2 md:grid-cols-4">
           <div className="sm:col-span-2 md:col-span-1">
             <Link href="#" className="flex items-center gap-2">
-              <span className="flex size-8 items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground">
+              <span className="flex size-8 items-center justify-center rounded-md bg-primary text-sm font-semibold text-primary-foreground">
                 S
               </span>
-              <span className="text-lg font-semibold tracking-tight text-foreground">
+              <span className="font-heading text-lg font-medium tracking-tight text-foreground">
                 ShopSense
               </span>
             </Link>
@@ -59,15 +67,15 @@ export function SiteFooter() {
               ส่งตรงถึงบ้านคุณ
             </p>
             <div className="mt-4 flex items-center gap-2 text-sm text-muted-foreground">
-              <MapPin className="size-4 shrink-0" />
+              <MapPin weight="bold" className="size-4 shrink-0" />
               <span>123 ถ.สุขุมวิท กรุงเทพฯ 10110</span>
             </div>
             <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
-              <Phone className="size-4 shrink-0" />
+              <Phone weight="bold" className="size-4 shrink-0" />
               <span>02-123-4567</span>
             </div>
             <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
-              <Mail className="size-4 shrink-0" />
+              <EnvelopeSimple weight="bold" className="size-4 shrink-0" />
               <span>support@shopsense.dev</span>
             </div>
           </div>
@@ -91,19 +99,21 @@ export function SiteFooter() {
         </div>
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
-          <p className="text-xs text-muted-foreground">
+          <p className="font-mono text-[0.7rem] tracking-wide text-muted-foreground">
             © 2026 ShopSense. สงวนลิขสิทธิ์ทุกประการ
           </p>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon-sm" aria-label="Facebook">
-              <Globe className="size-4" />
+              <FacebookLogo weight="bold" className="size-4" />
             </Button>
             <Button variant="ghost" size="icon-sm" aria-label="Instagram">
-              <Camera className="size-4" />
+              <InstagramLogo weight="bold" className="size-4" />
             </Button>
             <Button variant="ghost" size="icon-sm" aria-label="X (Twitter)">
-              <MessageCircle className="size-4" />
+              <XLogo weight="bold" className="size-4" />
             </Button>
+            <span className="mx-1 h-5 w-px bg-border" aria-hidden />
+            <ThemeToggle />
           </div>
         </div>
       </div>
