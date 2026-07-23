@@ -121,7 +121,7 @@ export default function Home() {
 
         <div className="relative mx-auto max-w-3xl px-4 pt-24 pb-4 text-center sm:px-6 sm:pt-32 lg:px-8">
           <p className="animate-in fade-in slide-in-from-bottom-2 font-mono text-xs tracking-[0.15em] text-muted-foreground uppercase duration-700">
-            ShopSense · คอลเลกชันซัมเมอร์ 2026
+            CodingThailand · คอลเลกชันซัมเมอร์ 2026
           </p>
           <h1 className="animate-in fade-in slide-in-from-bottom-4 mt-4 font-heading text-5xl leading-[1.1] font-medium tracking-tight text-foreground duration-700 delay-100 fill-mode-both sm:text-7xl">
             อัปเกรดไลฟ์สไตล์ดิจิทัล

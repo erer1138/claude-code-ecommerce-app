@@ -13,16 +13,16 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 const FOOTER_COLUMNS = [
   {
-    title: "ช้อปปิ้ง",
-    links: ["สินค้าทั้งหมด", "สมาร์ทโฟน", "แล็ปท็อป", "หูฟัง", "แท็บเล็ต", "อุปกรณ์เสริม"],
+    title: "Shopping",
+    links: ["All Products", "Smartphones", "Laptops", "Headphones", "Tablets", "Accessories"],
   },
   {
-    title: "บริการลูกค้า",
-    links: ["ติดตามคำสั่งซื้อ", "นโยบายการคืนสินค้า", "การจัดส่งสินค้า", "คำถามที่พบบ่อย", "ติดต่อเรา"],
+    title: "Customer Service",
+    links: ["Track Order", "Return Policy", "Shipping", "FAQ", "Contact Us"],
   },
   {
-    title: "บริษัท",
-    links: ["เกี่ยวกับเรา", "ร่วมงานกับเรา", "ข่าวสาร", "ข้อกำหนดการใช้งาน", "ความเป็นส่วนตัว"],
+    title: "Company",
+    links: ["About Us", "Careers", "News", "Terms of Service", "Privacy Policy"],
   },
 ];
 
@@ -56,10 +56,10 @@ export function SiteFooter() {
           <div className="sm:col-span-2 md:col-span-1">
             <Link href="#" className="flex items-center gap-2">
               <span className="flex size-8 items-center justify-center rounded-md bg-primary text-sm font-semibold text-primary-foreground">
-                S
+                C
               </span>
               <span className="font-heading text-lg font-medium tracking-tight text-foreground">
-                ShopSense
+                CodingThailand
               </span>
             </Link>
             <p className="mt-3 max-w-xs text-sm text-muted-foreground">
@@ -76,7 +76,7 @@ export function SiteFooter() {
             </div>
             <div className="mt-2 flex items-center gap-2 text-sm text-muted-foreground">
               <EnvelopeSimple weight="bold" className="size-4 shrink-0" />
-              <span>support@shopsense.dev</span>
+              <span>support@codingthailand.dev</span>
             </div>
           </div>
 
@@ -100,7 +100,7 @@ export function SiteFooter() {
 
         <div className="flex flex-col items-center justify-between gap-4 border-t border-border pt-6 sm:flex-row">
           <p className="font-mono text-[0.7rem] tracking-wide text-muted-foreground">
-            © 2026 ShopSense. สงวนลิขสิทธิ์ทุกประการ
+            © 2026 CodingThailand. สงวนลิขสิทธิ์ทุกประการ
           </p>
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="icon-sm" aria-label="Facebook">

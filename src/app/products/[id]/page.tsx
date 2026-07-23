@@ -21,7 +21,7 @@ export async function generateMetadata({
   const product = id ? await getProductDetail(id) : null;
 
   return {
-    title: product ? `${product.name} | ShopSense` : "ไม่พบสินค้า | ShopSense",
+    title: product ? `${product.name} | CodingThailand` : "ไม่พบสินค้า | CodingThailand",
   };
 }
 

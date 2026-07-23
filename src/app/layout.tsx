@@ -35,7 +35,7 @@ const trirong = Trirong({
 });
 
 export const metadata: Metadata = {
-  title: "ShopSense — ร้านค้าออนไลน์สินค้าไอทีครบวงจร",
+  title: "CodingThailand — ร้านค้าออนไลน์สินค้าไอทีครบวงจร",
   description: "สมาร์ทโฟน แล็ปท็อป หูฟัง และอุปกรณ์เสริม คุณภาพดี ราคาคุ้มค่า ส่งฟรีทั่วประเทศ",
 };
 

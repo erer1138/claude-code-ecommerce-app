@@ -15,7 +15,7 @@ import {
 import { getCategories, getProductListing } from "@/lib/products/queries";
 
 export const metadata: Metadata = {
-  title: "สินค้าทั้งหมด | ShopSense",
+  title: "สินค้าทั้งหมด | CodingThailand",
   description: "เลือกซื้อสมาร์ทโฟน แล็ปท็อป และอุปกรณ์เสริมคุณภาพดี ราคาคุ้มค่า",
 };
 

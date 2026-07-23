@@ -15,11 +15,11 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { label: "หน้าแรก", href: "#" },
-  { label: "สินค้าทั้งหมด", href: "/products" },
-  { label: "หมวดหมู่", href: "#categories" },
-  { label: "โปรโมชั่น", href: "#promo" },
-  { label: "เกี่ยวกับเรา", href: "#" },
+  { label: "Home", href: "#" },
+  { label: "All Products", href: "/products" },
+  { label: "Categories", href: "#categories" },
+  { label: "Promotions", href: "#promo" },
+  { label: "About Us", href: "#" },
 ];
 
 export function SiteHeader() {
@@ -45,10 +45,10 @@ export function SiteHeader() {
 
         <Link href="#" className="flex items-center gap-2 shrink-0">
           <span className="flex size-8 items-center justify-center rounded-md bg-primary text-sm font-semibold text-primary-foreground">
-            S
+            C
           </span>
           <span className="hidden font-heading text-lg font-medium tracking-tight text-foreground sm:inline">
-            ShopSense
+            CodingThailand
           </span>
         </Link>
 
