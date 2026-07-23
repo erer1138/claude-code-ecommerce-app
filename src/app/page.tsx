@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowCounterClockwise,
@@ -18,6 +19,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Reveal } from "@/components/reveal";
 import { AddToCartButton } from "@/components/add-to-cart-button";
+import { cn } from "@/lib/utils";
 
 const FEATURED_CATEGORY = {
   name: "สมาร์ทโฟน",
@@ -39,6 +41,7 @@ const FEATURED_PRODUCT = {
   originalPrice: 49900,
   tag: "สินค้าขายดีอันดับ 1",
   tagVariant: "yellow" as const,
+  image: "/product-image/iphone16pro-front.jpg",
 };
 
 const PRODUCTS = [
@@ -48,6 +51,7 @@ const PRODUCTS = [
     price: 32900,
     tag: "มาใหม่",
     tagVariant: "blue" as const,
+    image: "/product-image/galaxy-s25-front.jpg",
   },
   {
     name: "MacBook Air M3",
@@ -55,6 +59,7 @@ const PRODUCTS = [
     price: 44900,
     tag: "ขายดี",
     tagVariant: "green" as const,
+    image: "/product-image/macbook-air-m3-silver.jpg",
   },
   {
     name: "AirPods Pro 2",
@@ -63,6 +68,7 @@ const PRODUCTS = [
     originalPrice: 10900,
     tag: "ลดราคา",
     tagVariant: "red" as const,
+    image: "/product-image/airpods-pro2-case.jpg",
   },
   {
     name: "iPad Air M2",
@@ -70,6 +76,7 @@ const PRODUCTS = [
     price: 33900,
     tag: "มาใหม่",
     tagVariant: "blue" as const,
+    image: "/product-image/nopic.png",
   },
 ];
 
@@ -248,8 +255,14 @@ export default function Home() {
 
           <Reveal className="mb-6">
             <div className="flex flex-col items-center gap-8 rounded-xl border border-border bg-card p-8 text-center sm:flex-row sm:p-12 sm:text-left">
-              <div className="flex aspect-square w-40 shrink-0 items-center justify-center rounded-xl border border-border bg-background sm:w-56">
-                <DeviceMobile weight="thin" className="size-20 text-foreground/60" />
+              <div className="relative aspect-square w-40 shrink-0 overflow-hidden rounded-xl border border-border bg-background sm:w-56">
+                <Image
+                  src={FEATURED_PRODUCT.image}
+                  alt={FEATURED_PRODUCT.name}
+                  fill
+                  sizes="(min-width: 640px) 14rem, 10rem"
+                  className="object-cover"
+                />
               </div>
               <div>
                 <Badge variant={FEATURED_PRODUCT.tagVariant} dot>
@@ -287,10 +300,18 @@ export default function Home() {
             {PRODUCTS.map((product, i) => (
               <Reveal key={product.name} delay={i * 60} className="h-full">
                 <div className="group flex h-full flex-col items-center rounded-xl border border-border bg-card p-8 text-center transition-all duration-300 ease-out hover:-translate-y-0.5 hover:shadow-[0_2px_8px_rgba(0,0,0,0.04)]">
-                  <div className="flex aspect-square w-full items-center justify-center">
-                    <DeviceMobile
-                      weight="thin"
-                      className="size-16 text-foreground/60 transition-transform duration-300 ease-out group-hover:scale-110"
+                  <div className="relative aspect-square w-full overflow-hidden rounded-lg">
+                    <Image
+                      src={product.image}
+                      alt={product.name}
+                      fill
+                      sizes="(min-width: 1024px) 22vw, (min-width: 640px) 45vw, 90vw"
+                      className={cn(
+                        "transition-transform duration-300 ease-out group-hover:scale-110",
+                        product.image.endsWith("nopic.png")
+                          ? "object-contain p-8 opacity-60"
+                          : "object-cover"
+                      )}
                     />
                   </div>
                   <Badge variant={product.tagVariant} dot className="mt-4">

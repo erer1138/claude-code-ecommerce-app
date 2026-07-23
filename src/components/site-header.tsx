@@ -16,7 +16,7 @@ import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { label: "หน้าแรก", href: "#" },
-  { label: "สินค้าทั้งหมด", href: "#products" },
+  { label: "สินค้าทั้งหมด", href: "/products" },
   { label: "หมวดหมู่", href: "#categories" },
   { label: "โปรโมชั่น", href: "#promo" },
   { label: "เกี่ยวกับเรา", href: "#" },
